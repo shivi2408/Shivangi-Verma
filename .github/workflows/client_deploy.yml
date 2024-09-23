@@ -31,24 +31,6 @@ jobs:
           node -v
           npm cache clean --force
           npm install
-
-  
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'Production'
-    permissions:
-      id-token: write #This is required for requesting the JWT
-  
-    steps:
-      - uses: actions/checkout@v4
-  
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20.17.0'
-
       - name: Configure Git
         run: |
           git config --global user.name "Shivangi Verma"
@@ -58,5 +40,32 @@ jobs:
         run: |
           cd ${{ env.PACKAGE_PATH }}
           npm run deploy
+
+  
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   environment:
+  #     name: 'Production'
+  #   permissions:
+  #     id-token: write #This is required for requesting the JWT
+  
+  #   steps:
+  #     - uses: actions/checkout@v4
+  
+  #     - name: Set up Node.js version
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '20.17.0'
+
+  #     - name: Configure Git
+  #       run: |
+  #         git config --global user.name "Shivangi Verma"
+  #         git config --global user.email "shivangi.24.verma@gmail.com"
+          
+  #     - name: npm deploy
+  #       run: |
+  #         cd ${{ env.PACKAGE_PATH }}
+  #         npm run deploy
       
         
