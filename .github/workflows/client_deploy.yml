@@ -1,4 +1,4 @@
-name: fronend build, deploy
+name: frontend build, deploy
 
 on:
   push:
@@ -10,6 +10,7 @@ on:
 
 env:
   PACKAGE_PATH: './client/'
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
@@ -31,10 +32,25 @@ jobs:
           npm cache clean --force
           npm install
 
-      - name: deploy
+  deploy:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v4
+  
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.17.0'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "Shivangi Verma"
+          git config --global user.email "shivangi.24.verma@gmail.com"
+          
+      - name: npm deploy
         run: |
           cd ${{ env.PACKAGE_PATH }}
-          pwd
           npm run deploy
       
         
