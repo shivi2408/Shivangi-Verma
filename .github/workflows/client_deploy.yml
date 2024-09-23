@@ -1,0 +1,40 @@
+name: fronend build, deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'client/**'
+  workflow_dispatch:
+
+env:
+  PACKAGE_PATH: './client/'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.17.0'
+
+      - name: npm install, build
+        run: |
+          cd ${{ env.PACKAGE_PATH }}
+          pwd
+          node -v
+          npm cache clean --force
+          npm install
+
+      - name: deploy
+        run: |
+          cd ${{ env.PACKAGE_PATH }}
+          pwd
+          npm run deploy
+      
+        
