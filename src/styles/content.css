@@ -1,0 +1,229 @@
+.contact-content{
+  display: flex;
+  align-items: center;
+  position: relative; 
+  z-index: 2; 
+  writing-mode: vertical-rl;
+text-orientation: upright;
+}
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50vw;
+    bottom: 0;
+    background-image: url('../assets/bg1.svg');
+    background-size: cover; 
+    background-position: center;
+    filter: blur(10px);
+    z-index: 1;
+}
+
+.contact-block{
+    margin-top: 4vh;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3vh;
+}
+
+.project-block{
+    margin-top: 8vh;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vh;
+    padding:0 5vw;
+}
+
+.content-block{
+    margin-top: 4vh;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    z-index:99
+}
+
+.skill-content{
+    margin-top: 6vh;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(6, 1fr);
+    z-index: 99;
+    gap: 3vw;
+}
+.stack-icon{
+    width:60px;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .skill-content{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .stack-icon{
+        width:40px !important;
+    }
+}
+
+.tile{
+    width:40vw;
+    padding: 3vh 2vw;
+    border-radius: 10px;
+    border: 2px solid rgba(22, 119, 255, 0.16);
+    gap:1.8vh;
+
+}
+
+.tile h1{
+    font-size: 60px;
+    margin-bottom: 0;
+    color: #eb79b2;
+    font-family: fangsong;
+}
+.social-icons{
+    display:flex;
+    gap:1vw;
+    cursor:pointer;
+    font-weight: bold;
+}
+.contact-block h2,.content-block h2{
+    font-weight: 400;
+    font-family: math;
+    margin: 0;
+}
+.content-block a{
+    color:#7c3aed
+}
+a{
+    color:aliceblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+a:hover{
+color: #eb79b2;
+}
+
+.button-74 {
+    position: relative; /* Ensure the ::before element is positioned relative to the button */
+    background-color: #0d1224;
+    color: #7c3aed;
+    border:0;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    width: 140px;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 43px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    transition: .3s;
+  }
+  
+  .button-74::before {
+    content: '';
+    background: linear-gradient(45deg, #8400ff, #c300ff, #f383f7, #b491f5, #fa56ec, #ff00c8, #7700ff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    border-radius: 30px; /* Same border-radius as the button */
+    animation: glowing 20s linear infinite;
+    opacity: 1; /* Keep the glowing effect visible at all times */
+    transition: opacity .3s ease-in-out;
+  }
+  
+  .button-74:hover {
+    color: #ec4899;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  
+.contact-block .button-74{
+    background-color: #060912;
+    
+}
+.vertical-timeline{
+    padding-top: 6em !important; 
+}
+.vertical-timeline--two-columns .vertical-timeline-element-content {
+    background-color: transparent;
+    border: 1px solid rgba(22, 119, 255, 0.411);
+    box-shadow:none
+}
+
+.vertical-timeline-element-content:hover {
+   box-shadow: 0 0 9px rgba(22, 119, 255, 0.411), 0 0 30px rgba(22, 119, 255, 0.411);
+}
+
+.vertical-timeline-element-subtitle{
+    margin-top:1.2vh;
+}
+
+
+.terminal {
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    width: 25vw;
+    min-height: 30vh;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.header {
+    background-color: rgba(51, 51, 51, 25%);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin-right: 6vw;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red {
+    background-color: #FF605C;
+}
+
+.yellow {
+    background-color: #FFBD44;
+}
+
+.green {
+    background-color: #00CA4E;
+}
+
+.output {
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 16px;
+}

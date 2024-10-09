@@ -1,0 +1,52 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  position: relative; 
+  z-index: 2; 
+  margin-top:3vh
+}
+
+.section-header .line {
+  width: 6rem;
+  height: 2px;
+  background-color: #1a1443;
+}
+
+.title {
+  background-color: #1a1443;
+  color: white;
+  padding: 8px 20px; 
+  font-size: 1.25rem; 
+  border-radius: 8px; 
+  white-space: nowrap;
+  width: fit-content;
+  box-shadow: 0 0 9px rgba(143, 103, 255, 0.3);
+}
+
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    will-change: transform, top, left;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out,transform 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ec4899
+}
+
+.cursor-dot-outline {
+    width: 40px;
+    height: 40px;
+    /* background-color: #52a4b677; */
+    border: 2px solid #ec4899
+}
