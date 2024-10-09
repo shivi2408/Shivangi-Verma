@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Shivangi-Verma/static/css/main.8b84cfce.css",
+    "main.js": "/Shivangi-Verma/static/js/main.6bb6b41b.js",
+    "static/media/exp.gif": "/Shivangi-Verma/static/media/exp.0fedaa543ad66a9268e7.gif",
+    "static/media/bgcode.webp": "/Shivangi-Verma/static/media/bgcode.c6d86dddde7b4b7c150f.webp",
+    "static/media/bg1.svg": "/Shivangi-Verma/static/media/bg1.87df826489b53c0791f8.svg",
+    "index.html": "/Shivangi-Verma/index.html",
+    "main.8b84cfce.css.map": "/Shivangi-Verma/static/css/main.8b84cfce.css.map",
+    "main.6bb6b41b.js.map": "/Shivangi-Verma/static/js/main.6bb6b41b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b84cfce.css",
+    "static/js/main.6bb6b41b.js"
+  ]
+}
