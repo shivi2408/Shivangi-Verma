@@ -7,6 +7,7 @@ import '../../styles/content.css';
 
 const Contact = () => (
     <div className="section" style={{maxHeight: "34vh",backgroundColor: "rgba(0, 0, 0, 0.5)"}}>
+        <div className="contact-background"></div>
         <div className="section-header">
             <span className="line"></span>
             <span className="title">Contact</span>

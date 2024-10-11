@@ -37,7 +37,7 @@ const About = () => (
                       </a>
                     </button>
                 </div>
-                <div className="tile colflex"></div>
+                <div className="feature tile colflex"></div>
             </div>
     </div>
 );

@@ -5,7 +5,7 @@ import '../../styles/Home.css'
 import '../../styles/card.css'
 
 const Skills = () => (
-    <div className="section"style={{height: "54vh"}}>
+    <div className="section"style={{maxHeight: "64svh"}}>
         <div className="section-header">
             <span className="line"></span>
             <span className="title">Skills</span>
@@ -80,8 +80,8 @@ const Skills = () => (
             </div>
             <div class="card">
                 <div class="card-info colflex">
-                    <StackIcon className="stack-icon" name="materialui" />
-                    <p class="title">MaterialUI</p> 
+                    <StackIcon className="stack-icon" name="vuejs" />
+                    <p class="title">Vue js*</p> 
                 </div>
             </div>
         </div>

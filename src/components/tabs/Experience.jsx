@@ -10,8 +10,8 @@ const Experience = () => (
                 <span className="title">Experience</span>
                 <span className="line"></span>
         </div>
-        <div className="rowflex" style={{justifyContent:"space-around", width:"100%", marginTop:"9vh"}}>
-        <img src={expGif} alt="Loading..." style={{ width: "35vw", height: "50vh" , alignSelf: "center"}} />
+        <div className="rowflex" style={{marginLeft:"-10svw",marginTop:"9svh",gap:"3svw"}}>
+        <img src={expGif} alt="gif" style={{ width: "38svw", height: "55svh" , alignSelf: "center"}} />
             <div className="exp-card">
                 <div className="glow-container">
                     <article className="glow-card">

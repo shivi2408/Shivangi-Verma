@@ -28,10 +28,10 @@
   z-index: -1;
   height: 100%;
   width: 100%;
-  transform: scale(0.8);
   filter: blur(20px);
   background: var(--background);
-  transition: opacity .5s;
+  opacity: 0; /* Hidden initially */
+  
  }
  
  .card-info {
@@ -59,7 +59,8 @@
  
  /*Hover*/
  .card:hover::after {
-  opacity: 0;
+  opacity: 1; /* Visible on hover */
+  transform: scale(0.8); 
  }
  
  .card:hover .card-info {

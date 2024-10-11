@@ -96,6 +96,9 @@ const Home = () => {
         <section ref={aboutRef} id="about">
           <About />
         </section>
+        <section ref={skillsRef} id="skills">
+          <Skills />
+        </section>
         <section ref={experienceRef} id="experience">
           <Experience />
         </section>
@@ -104,9 +107,6 @@ const Home = () => {
         </section>
         <section ref={projectsRef} id="projects">
           <Projects />
-        </section>
-        <section ref={skillsRef} id="skills">
-          <Skills />
         </section>
         <section ref={contactRef} id="contact">
           <Contact />

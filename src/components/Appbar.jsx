@@ -5,7 +5,7 @@ import { IoClose } from "react-icons/io5";
 import '../styles/Appbar.css'
 const Appbar = ({ activeTab, onTabChange }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const tabs = ["About", "Experience","Education", "Projects" ,"Skills", "Contact"];
+    const tabs = ["About" ,"Skills","Experience","Education", "Projects" , "Contact"];
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
