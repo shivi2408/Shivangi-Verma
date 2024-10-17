@@ -17,10 +17,10 @@ const Appbar = ({ activeTab, onTabChange }) => {
 
     return (
         <div className="appbar">
-            <div className="app-content">
+            <div className="app-content rowflex">
                 <div className="rowflex">
-                <h3>/.Shivangi</h3>
-                <h3 style={{color:"#7c3aed", marginLeft:0}}>Verma ./</h3>
+                    <h3>/.Shivangi</h3>
+                    <h3 style={{marginLeft:0}}>Verma ./</h3>
                 </div>
             
             <ul className="tab-list">
@@ -42,16 +42,13 @@ const Appbar = ({ activeTab, onTabChange }) => {
                 )}
             </div>
 
-            <div className="divider-container">
-                <div className="divider gradient-left"></div>
-                <div className="divider gradient-right"></div>
-            </div>
+            
 
 
             {/* Sidebar */}
             <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
                 <div className="close-icon" onClick={closeSidebar}>
-                     <IoClose />
+                     <IoClose size={"28"}/>
                 </div>
                 <ul className="sidebar-tabs">
                     {tabs.map((tab) => (
@@ -69,6 +66,11 @@ const Appbar = ({ activeTab, onTabChange }) => {
                 </ul>
             </div>
             {isSidebarOpen && <div className="sidebar-backdrop" onClick={closeSidebar}></div>}
+            
+            <div className="divider-container">
+                <div className="divider gradient-left"></div>
+                <div className="divider gradient-right"></div>
+            </div>
             </div>
     );
 };

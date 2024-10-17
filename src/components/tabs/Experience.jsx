@@ -4,7 +4,7 @@ import '../../styles/Home.css'
 import expGif from '../../assets/exp.gif'
 
 const Experience = () => (
-    <div className="section">
+    <div className="section colflex">
         <div className="section-header" style={{marginTop:"4vh"}}>
                 <span className="line"></span>
                 <span className="title">Experience</span>
@@ -12,10 +12,9 @@ const Experience = () => (
         </div>
         <div className="rowflex" style={{marginLeft:"-10svw",marginTop:"9svh",gap:"3svw"}}>
         <img src={expGif} alt="gif" style={{ width: "38svw", height: "55svh" , alignSelf: "center"}} />
-            <div className="exp-card">
+            <div className="exp-card colflex">
                 <div className="glow-container">
                     <article className="glow-card">
-                        <div className="glows"></div>
                         <h4>(Oct 2023 - Present)</h4>
                         <h2>Software Developer</h2>
                         <p>Katalyst Business Solutions, Navi Mumbai</p>
@@ -23,7 +22,6 @@ const Experience = () => (
                 </div>
                 <div className="glow-container">
                     <article className="glow-card">
-                        <div className="glows"></div>
                         <h4>(June 2021 - July 2021)</h4>
                         <h2>Vocational Training</h2>
                         <p>Hindustan Aeronautics Limited, Lucknow</p>
@@ -31,7 +29,6 @@ const Experience = () => (
                 </div>
                 <div className="glow-container">
                     <article className="glow-card">
-                            <div className="glows"></div>
                             <h4>(May 2021 - July 2021)</h4>
                             <h2>SDE Intern</h2>
                             <p>Beat the Virus Startup, Lucknow</p>

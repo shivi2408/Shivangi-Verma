@@ -14,7 +14,7 @@
 
 .title {
   background-color: #1a1443;
-  color: white;
+  color: var(--title-color);
   padding: 8px 20px; 
   font-size: 1.25rem; 
   border-radius: 8px; 
@@ -41,12 +41,53 @@
 .cursor-dot {
     width: 8px;
     height: 8px;
-    background-color: #ec4899
+    background-color: var(--primary)
 }
 
 .cursor-dot-outline {
     width: 40px;
     height: 40px;
     /* background-color: #52a4b677; */
-    border: 2px solid #ec4899
+    border: 2px solid var(--primary)
+}
+
+.button {
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: .3s;
+  padding: 0.5em 1em;
+  position: relative;
+  border-radius: 0.6em;
+  transition: all 0.3s;
+  cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+  line-height: 1.4em;
+  border: 1px solid var(--button-color);
+  background: linear-gradient(to right, rgba(132, 27, 253, 0.1) 1%, transparent 40%,transparent 60% , rgba(132, 27, 253, 0.1) 100%);
+  color: var(--button-color);
+  box-shadow: inset 0 0 10px rgba(132, 27, 253, 0.4), 0 0 9px 3px rgba(132, 27, 253, 0.1);
+}
+
+.button:hover {
+  box-shadow: inset 0 0 10px rgba(132, 27, 253, 0.6), 0 0 9px 3px rgba(132, 27, 253, 0.2);
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: -2em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform .4s ease-in-out;
+  background: linear-gradient(to right, transparent 1%, rgba(132, 27, 253, 0.1) 40%,rgba(132, 27, 253, 0.1) 60% , transparent 100%);
+}
+
+.button:hover:before {
+  transform: translateX(120px);
 }

@@ -4,10 +4,9 @@
     width: 100%;
     height: 100svh;
     box-sizing: border-box;
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding-top:10svh;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: #7c3aed30 transparent;
+    overflow-y: auto;
+    scrollbar-width: thin; 
+    scrollbar-color: var(--scroll-bar) var(--empty);
   }
 
 .rowflex{
@@ -18,32 +17,19 @@ flex-direction: row;
     display: flex;
     flex-direction: column;
 }
-.section {
-    
-    display:flex;
-    align-items:center;
-    flex-direction: column;
-    width: 100%;
-    padding-top: 2svh ;
-    height:88svh;
-    /* margin-top:10vh */
-}
 
-.tab-content{
-    position:relative;
-    height:auto;
-    
-}
-.tab-content section {
+section {
     position: relative; 
     z-index: 1; 
-    /* top:10vh */
-  }
-
+}
+#contact .section{
+    margin-bottom:0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+/* 
 .blur-background {
-    /* background-image: url('../assets/bgcode.webp'); */
+    background-image: url('../assets/bgcode.webp');
     position: absolute;
-    /* width: 75vw; */
     top: 10svh;
     left: 10vw;
     right: 0;
@@ -52,81 +38,9 @@ flex-direction: row;
     background-size: 85%;
     opacity: 0.3;
     z-index: 1;
-}
-
-
-@property --angle {
-    syntax: '<angle>';
-    initial-value: 90deg;
-    inherits: true;
-  }
-  
-  @property --gradX {
-    syntax: '<percentage>';
-    initial-value: 50%;
-    inherits: true;
-  }
-  
-  @property --gradY {
-    syntax: '<percentage>';
-    initial-value: 0%;
-    inherits: true;
-  }
-
-.glow-container {
-    --gap: 15px;
-    --blur: 9px;
-    --spread: 30px;
-    --direction: row;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 85vw; */
-    margin-top:4svh;
-    position: relative; 
-   z-index: 2; 
-}
-.glow-container h4{
-    color:#2ffcad;
-    text-align: center;
-}
-.glow-container h2{
-    font-weight: 100;
-}
-.glow-card {
-    position: relative;
-    background-color: #101123;
-    color: #e6e5e5;
-    border: 2px solid #2a2e5a;
-    border-radius: 12px;
-    transition: all 0.3s;
-    overflow: hidden;
-    width:25svw;
-    box-shadow: 0 0 var(--blur) rgba(143, 103, 255, 0.3);
-    /* text-align: center; */
-    padding-left: 1.5svw;
-    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
-	animation: borderRotate var(--d) linear infinite forwards;
-}
-
-
-@keyframes borderRotate {
-	100% {
-		--angle: 420deg;
-	}
-}
-
-.glow-card:hover {
-    border-color: transparent;
-    box-shadow: 0 0 var(--blur) rgba(166, 131, 247, 0.5), 0 0 var(--spread) #4f338f;
-}
-
+} */
 
 @media (max-width: 768px) {
-    .main-container {
-        padding: 10px;
-    }
-
     .section {
         padding: 15px;
         height:auto
@@ -142,13 +56,11 @@ flex-direction: row;
 }
 
 @media (max-width: 480px) {
-    .main-container {
-        padding: 5px;
-    }
     .section {
         padding-left:0;
         margin-top: 15px;
-        height:auto
+        height:auto;
+        margin-bottom:0
     }
     .section-header{
         margin-bottom:3svh;
@@ -160,7 +72,7 @@ flex-direction: row;
     .section p {
         font-size: 0.85rem;
     }
-    .glow-card{
+    .glow-container{
         width: 70svw;
         height: 18svh;
     }
@@ -172,9 +84,9 @@ flex-direction: row;
         height:50svw
     }
     .hamburger{
-        margin-right:2svw
+        margin-right:4svw
     }
-    .rowflex img{
+    .rowflex img,.arrow{
         display:none;
     }
     .vertical-timeline{
@@ -193,10 +105,12 @@ flex-direction: row;
         gap:0;
     }
     .content-block{
+        margin-top:0;
         grid-template-columns: repeat(1,1fr);
     }
     .content-block .tile{
-        width:80svw
+        width:80svw;
+        padding: 0svh 2svw;
     }
     .content-block .tile:first-child{
         order:2
@@ -212,14 +126,3 @@ flex-direction: row;
         height:4svh;
     }
 }
-
-/* 
-.grid {
-    width: 100%;
-    height: 100%;
-    --color: rgba(114, 114, 114, 0.3);
-    background-color: #191a1a;
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
-    background-size: 55px 55px;
-  } */

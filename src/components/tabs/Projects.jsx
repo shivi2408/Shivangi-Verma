@@ -11,7 +11,7 @@ const Projects = () => {
     };
 
     return (
-        <div className="section">
+        <div className="section colflex">
             <div className="section-header">
                 <span className="line"></span>
                 <span className="title">Projects</span>

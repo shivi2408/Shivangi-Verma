@@ -50,11 +50,9 @@ const cursor = {
   
         const dotSize = self.$dot.offsetWidth;
 
-        // Calculate the cursor position and prevent overflow
         self.endX = Math.min(Math.max(e.pageX, 0), window.innerWidth - dotSize);
         self.endY = Math.min(Math.max(e.pageY, 0), window.innerHeight - dotSize);
 
-        // Set the cursor dot position
         self.$dot.style.top = self.endY + 'px';
         self.$dot.style.left = self.endX + 'px';
       });

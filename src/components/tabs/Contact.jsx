@@ -6,7 +6,7 @@ import { FiDownload } from "react-icons/fi";
 import '../../styles/content.css';
 
 const Contact = () => (
-    <div className="section" style={{maxHeight: "34vh",backgroundColor: "rgba(0, 0, 0, 0.5)"}}>
+    <div className="section colflex" style={{maxHeight: "34vh",backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
         <div className="contact-background"></div>
         <div className="section-header">
             <span className="line"></span>
@@ -18,7 +18,7 @@ const Contact = () => (
                     <h2>Wanna Discuss a New Project?</h2>
                 </div>
                 <div className="tile colflex">
-                    <h2 style={{color:"#eb79b2"}}>Get In Touch!!</h2>
+                    <h2 style={{color:"var(--tertiary)"}}>Get In Touch!!</h2>
                     
                     <div className="social-icons">
                         <a href="https://github.com/shivi2408" target="_blank" rel="noopener noreferrer">
@@ -34,7 +34,8 @@ const Contact = () => (
                             <TbBrandGmail id="gmail" size={26} />
                         </a>
                     </div>
-                    <button className="button-74">
+                    <button class="button">
+                      <div class="button-overlay"></div>
                       <a href="../../Shivangi_Verma.pdf" download="Shivangi_Resume.pdf" style={{ textDecoration: 'none', color: 'inherit' }}>
                         Resume <FiDownload size={20}/>
                       </a>

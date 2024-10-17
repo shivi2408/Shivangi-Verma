@@ -35,7 +35,7 @@
  }
  
  .card-info {
-  background: #0d1224;
+  background: var(--bgcolor);
   color: var(--color);
   display: flex;
   justify-content: center;
@@ -52,7 +52,7 @@
  
  .card .title {
   /* font-weight: bold; */
-  background-color: transparent;
+  background-color: var(--empty);
   box-shadow: none;
   margin-bottom:0;
  }
@@ -64,7 +64,7 @@
  }
  
  .card:hover .card-info {
-  color: #ffffff;
+  color: var(--text-white);
   transition: color 1s;
  }
  

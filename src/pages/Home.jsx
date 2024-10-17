@@ -87,32 +87,30 @@ const Home = () => {
 
   return (
     <div className="main-container colflex">
-      <div class="cursor-dot-outline"></div>
-      <div class="cursor-dot"></div>
+        <div class="cursor-dot-outline"></div>
+        <div class="cursor-dot"></div>
 
-      <Appbar onTabChange={handleTabChange} activeTab={activeTab} />
+        <Appbar onTabChange={handleTabChange} activeTab={activeTab} />
 
-      <div className="tab-content">
-        <section ref={aboutRef} id="about">
-          <About />
-        </section>
-        <section ref={skillsRef} id="skills">
-          <Skills />
-        </section>
-        <section ref={experienceRef} id="experience">
-          <Experience />
-        </section>
-        <section ref={educationRef} id="education">
-          <Education />
-        </section>
-        <section ref={projectsRef} id="projects">
-          <Projects />
-        </section>
-        <section ref={contactRef} id="contact">
-          <Contact />
-        </section>
+          <section ref={aboutRef} id="about">
+            <About />
+          </section>
+          <section ref={skillsRef} id="skills">
+            <Skills />
+          </section>
+          <section ref={experienceRef} id="experience">
+            <Experience />
+          </section>
+          <section ref={educationRef} id="education">
+            <Education />
+          </section>
+          <section ref={projectsRef} id="projects">
+            <Projects />
+          </section>
+          <section ref={contactRef} id="contact">
+            <Contact />
+          </section>
       </div>
-    </div>
   );
 };
 
