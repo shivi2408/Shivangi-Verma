@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Shivangi-Verma/static/css/main.a7bfbc1a.css",
-    "main.js": "/Shivangi-Verma/static/js/main.1805a111.js",
+    "main.css": "/Shivangi-Verma/static/css/main.273aed30.css",
+    "main.js": "/Shivangi-Verma/static/js/main.69ad16b2.js",
     "static/media/exp.gif": "/Shivangi-Verma/static/media/exp.0fedaa543ad66a9268e7.gif",
     "static/media/profile.png": "/Shivangi-Verma/static/media/profile.4ac6fac1403c32115e58.png",
     "static/media/image.png": "/Shivangi-Verma/static/media/image.fbecf18a829e77578ad6.png",
@@ -12,11 +12,11 @@
     "static/media/wall.jpeg": "/Shivangi-Verma/static/media/wall.a77e4a02e4a96f094ae6.jpeg",
     "static/media/end.svg": "/Shivangi-Verma/static/media/end.a2931fb556326b85e3ef.svg",
     "index.html": "/Shivangi-Verma/index.html",
-    "main.a7bfbc1a.css.map": "/Shivangi-Verma/static/css/main.a7bfbc1a.css.map",
-    "main.1805a111.js.map": "/Shivangi-Verma/static/js/main.1805a111.js.map"
+    "main.273aed30.css.map": "/Shivangi-Verma/static/css/main.273aed30.css.map",
+    "main.69ad16b2.js.map": "/Shivangi-Verma/static/js/main.69ad16b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7bfbc1a.css",
-    "static/js/main.1805a111.js"
+    "static/css/main.273aed30.css",
+    "static/js/main.69ad16b2.js"
   ]
 }
