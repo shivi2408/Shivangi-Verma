@@ -126,3 +126,79 @@ section {
         height:4svh;
     }
 }
+
+
+/* toggle button */
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 1000;
+    transition: transform 0.3s ease; 
+}
+
+.float:hover {
+    transform: scale(1.02); 
+}
+.toggle {
+    background-color: #ffffff1a;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.253);
+    line-height: 1;
+}
+.input {
+    display: none;
+}
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.icon--moon {
+transition-delay: 200ms;
+}
+.icon--sun {
+transform: scale(0);
+width: 25px;
+}
+
+#switch:checked + .icon--moon {
+transform: rotate(360deg) scale(0);
+}
+#switch:checked ~ .icon--sun {
+transition-delay: 200ms;
+transform: scale(1) rotate(360deg);
+}
+
+/* lightmode */
+body.light-mode {
+--bgcolor: #cfc8fa;
+--text-white: #000000;
+--button-color:rgba(70, 29, 252, 0.781);
+--social-bg: #a783d37c;
+--heading:#0ea169;
+}
+body.light-mode .glow-container{
+background:#aeb5f875
+}
+
+body.light-mode .glow-container::before{
+background-image: conic-gradient(transparent,transparent,transparent,#f5258d);
+}
+
+body.light-mode .sidebar-backdrop{
+background: rgb(155 153 153 / 64%);
+}

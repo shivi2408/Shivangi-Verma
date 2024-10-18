@@ -73,7 +73,7 @@ const About = () => (
             ]}
             speed={50}
             repeat={Infinity}
-            style={{ color: "lightpink" }}
+            style={{ color: "var(--button-color)" }}
           />
         </h2>
 

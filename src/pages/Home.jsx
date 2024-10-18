@@ -9,10 +9,12 @@ import Education from "../components/tabs/Education";
 import cursor from "../components/cursor";
 
 import "../styles/Home.css";
+// import sun from '../assets/sun.svg';
+// import moon from '../assets/moon.svg'
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("About");
-
+  const [isChecked, setIsChecked] = useState(false);
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const educationRef = useRef(null);
@@ -29,6 +31,19 @@ const Home = () => {
     Contact: contactRef,
   };
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.classList.toggle('light-mode', savedTheme === 'dark');
+    setIsChecked(savedTheme === 'light');
+  }, []);
+
+  const handleToggle = () => {
+    const newTheme = isChecked ? 'dark' : 'light';
+    document.body.classList.toggle('light-mode', newTheme === 'dark');
+    localStorage.setItem('theme', newTheme);
+    setIsChecked(!isChecked);
+  };
+
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     scrollToTab(tab);
@@ -40,6 +55,7 @@ const Home = () => {
       block: "start",
     });
   };
+  
 
   useEffect(() => {
     cursor.init();
@@ -51,7 +67,6 @@ const Home = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "0px",
       threshold: 0.5, 
     };
 
@@ -110,6 +125,18 @@ const Home = () => {
           <section ref={contactRef} id="contact">
             <Contact />
           </section>
+
+          <div className="float">
+            <label className="toggle" htmlFor="switch">
+              <input id="switch" className="input" type="checkbox" checked={isChecked} onChange={handleToggle}/>
+              <div className={`icon icon--moon ${isChecked ? 'hidden' : ''}`}>
+                <img src={process.env.PUBLIC_URL + '/moon.svg'} alt="moon icon" />
+              </div>
+              <div className={` icon icon--sun ${isChecked ? '' : 'hidden'}`}>
+                <img src={process.env.PUBLIC_URL + '/sun.svg'} alt="sun icon" />
+              </div>
+            </label>
+          </div>
       </div>
   );
 };

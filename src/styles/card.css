@@ -55,6 +55,7 @@
   background-color: var(--empty);
   box-shadow: none;
   margin-bottom:0;
+  color:var(--text-white)
  }
  
  /*Hover*/
